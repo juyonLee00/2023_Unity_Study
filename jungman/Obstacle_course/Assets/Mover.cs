@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
+    [SerializeField] float moveSpeed = 7f;
     void Start()
     {    
 
@@ -12,15 +13,15 @@ public class Mover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float xValue = Input.GetAxis("Horizontal");
-        float zValue = Input.GetAxis("Vertical");
+        float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
+        float zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed; 
         transform.Translate(xValue, 0, zValue);
     }
 }
 
 
-// Edit - Project Settings - InputManager
-// 플레이어가 키보드에서 누른 horizontal 축에 대한 정보, 즉 <- or -> // a or d 
-// 플레이어가 키보드에서 누른 Vertical 축에 대한 정보, 즉 위 or 아래 // w or s
-
-// 플레이어가 y축으로 움직이지 않도록 
+/*
+Game - Stats - FPS 확인 
+FPS: 초당 프레임 수, 컴퓨터 사양마다 FPS가 달라서 컴퓨터에 따라 Update()함수 실행 횟수도 달라지는 문제 
+Time.deltaTime(각 프레임이 실행된 시간을 알려줌) 사용해 FPS로부터 독립시킴
+*/
