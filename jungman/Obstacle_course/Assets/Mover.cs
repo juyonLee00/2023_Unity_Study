@@ -21,12 +21,12 @@ public class Mover : MonoBehaviour
 
 
 /*
--Window - package manager - cinemachine  - Unity registry - cinemachine 패키지 설치
--Add Cinemachine Brain component to main camera 
-  Cinemachine Brain: 가상 카메라 중 어떤 카메라를 보여줄지 법칙과 로직을 제공 
--Add virtual Camera
--Rename Virtual Camera 
-  follow - follow 
-  Look at - cctv 
--Tune distance 
+개체들끼리 서로 부딪히려면 rigid body라는 것을 추가해야 함 
+rigid body - 개체에 질량 부여 
+
+부딪혀서 뒤로 밀어냄 (작용-반작용?)
+Freeze Position / Rotation 설정 
+
+구석에 틈이 좀 있으면 벽을 뚫고 나갈 수 있음 - 나중에 ㄱ 
+(# 모양으로 만들었는데도 구석에서 뚫고 나가네..뭐지)
 */
