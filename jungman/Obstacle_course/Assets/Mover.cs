@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 7f;
+    [SerializeField] float moveSpeed = 7.0f;
     void Start()
     {    
 
@@ -21,7 +21,11 @@ public class Mover : MonoBehaviour
 
 
 /*
-Game - Stats - FPS 확인 
-FPS: 초당 프레임 수, 컴퓨터 사양마다 FPS가 달라서 컴퓨터에 따라 Update()함수 실행 횟수도 달라지는 문제 
-Time.deltaTime(각 프레임이 실행된 시간을 알려줌) 사용해 FPS로부터 독립시킴
+-Window - package manager - cinemachine  - Unity registry - cinemachine 패키지 설치
+-Add Cinemachine Brain component to camera 
+-Add virtual Camera
+-Rename Virtual Camera 
+  follow - follow 
+  Look at - cctv 
+-Tune distance 
 */
