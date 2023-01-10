@@ -22,7 +22,8 @@ public class Mover : MonoBehaviour
 
 /*
 -Window - package manager - cinemachine  - Unity registry - cinemachine 패키지 설치
--Add Cinemachine Brain component to camera 
+-Add Cinemachine Brain component to main camera 
+  Cinemachine Brain: 가상 카메라 중 어떤 카메라를 보여줄지 법칙과 로직을 제공 
 -Add virtual Camera
 -Rename Virtual Camera 
   follow - follow 
