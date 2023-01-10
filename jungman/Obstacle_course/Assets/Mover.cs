@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    
-    [SerializeField] float xValue = 0;
-    [SerializeField] float yValue = 0.01f;
-    [SerializeField] float zValue = 0;
-
     void Start()
     {    
 
@@ -17,10 +12,15 @@ public class Mover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(xValue, yValue, zValue);
+        float xValue = Input.GetAxis("Horizontal");
+        float zValue = Input.GetAxis("Vertical");
+        transform.Translate(xValue, 0, zValue);
     }
 }
 
 
-// [SerializeField]
-// 인스펙터 값을 변경해도 스크립트의 값이 변경되지 않는다.
+// Edit - Project Settings - InputManager
+// 플레이어가 키보드에서 누른 horizontal 축에 대한 정보, 즉 <- or -> // a or d 
+// 플레이어가 키보드에서 누른 Vertical 축에 대한 정보, 즉 위 or 아래 // w or s
+
+// 플레이어가 y축으로 움직이지 않도록 
