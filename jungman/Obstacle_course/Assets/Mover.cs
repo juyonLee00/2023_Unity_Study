@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    float xValue = 0;
-    float yValue = 0.01f;
-    float zValue = 0;
+    
+    [SerializeField] float xValue = 0;
+    [SerializeField] float yValue = 0.01f;
+    [SerializeField] float zValue = 0;
 
     void Start()
     {    
-        
+
     }
 
     // Update is called once per frame
@@ -21,4 +22,5 @@ public class Mover : MonoBehaviour
 }
 
 
-// 변수로 값을 관리할 수 있음 
+// [SerializeField]
+// 인스펙터 값을 변경해도 스크립트의 값이 변경되지 않는다.
