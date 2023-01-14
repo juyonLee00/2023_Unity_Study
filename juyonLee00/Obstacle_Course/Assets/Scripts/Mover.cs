@@ -11,11 +11,23 @@ public class Mover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.Translate(1,0,0);
+        PrintInstructions();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        MovePlayer();
+    }
+
+    void PrintInstructions()
+    {
+        Debug.Log("Welcome to the game");
+        Debug.Log("Move your player with WASD or arrow keys");
+        Debug.Log("Don't hit the walls!");
+    }
+
+    void MovePlayer()
     {
         //Input Manager의 축값을 가져와 키에 따라 -1, +1값 적용.
         //Time.deltaTime: 프레임 실행 시 걸리는 시간을 알려줌(CPU에 따른 차이 존재)
@@ -24,8 +36,6 @@ public class Mover : MonoBehaviour
         float zValue = Input.GetAxis("Vertical")*Time.deltaTime * moveSpeed;
 
         transform.Translate(xValue, 0, zValue);
-
-        
     }
 
     //cinemachine Brain: 가상 카메라중 어떤 카메라를 메인 카메라로 잡을지 결정.
