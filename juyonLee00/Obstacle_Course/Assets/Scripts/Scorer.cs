@@ -9,6 +9,5 @@ public class Scorer : MonoBehaviour
    private void OnCollisionEnter(Collision other) 
    {
     hits++;
-    Debug.Log(hits);
    }
 }
