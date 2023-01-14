@@ -27,4 +27,6 @@ public class Mover : MonoBehaviour
 
         
     }
+
+    //cinemachine Brain: 가상 카메라중 어떤 카메라를 메인 카메라로 잡을지 결정.
 }
